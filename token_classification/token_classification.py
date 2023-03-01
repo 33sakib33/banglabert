@@ -34,6 +34,8 @@ from transformers.utils import check_min_version
 from transformers.utils.versions import require_version
 from normalizer import normalize
 
+os.environ["WANDB_DISABLED"] = "true"
+
 EXT2CONFIG = {
     "jsonl": (JsonDatasetReader, {}),
     "json": (JsonDatasetReader, {})
