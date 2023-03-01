@@ -297,7 +297,7 @@ def main():
     if data_args.do_normalize:
         def normalize_example(example):
             for i, token in enumerate(example[data_args.tokens_key]):
-                normalized_token = normalize(token)
+                normalized_token = token
                 if len(normalized_token) > 0:
                     example[data_args.tokens_key][i] = normalized_token
 
